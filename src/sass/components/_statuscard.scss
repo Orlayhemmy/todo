@@ -12,13 +12,17 @@
     }
 
     span {
+      
       flex: 0.1;
       &:first-child {
+        width: 40px;
         display: flex;
         align-items: center;
         justify-content: center;
         background-color: $background-color;
-        padding: 8px;
+        padding: $sm;
+        max-width: $md * 2;
+
         @include border-radius(50%)
       }
       
