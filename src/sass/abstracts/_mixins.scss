@@ -1,0 +1,80 @@
+// @mixin card-wrapper {
+//   background-color: $color-white;
+//   border-radius: 14px;
+//   padding: $lg $sm + 2;
+//   flex: 1;
+// }
+
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+     -moz-border-radius: $radius;
+      -ms-border-radius: $radius;
+       -o-border-radius: $radius;
+          border-radius: $radius;
+}
+
+@mixin rotate($degree) {
+  -webkit-transform: rotate($degree);
+     -moz-transform: rotate($degree);
+      -ms-transform: rotate($degree);
+       -o-transform: rotate($degree);
+          transform: rotate($degree);
+}
+
+@mixin box-shadow {
+  -webkit-box-shadow: 2px 4px 6px -2px #a3a3a394;
+     -moz-box-shadow: 2px 4px 6px -2px #a3a3a394;
+      -ms-box-shadow: 2px 4px 6px -2px #a3a3a394;
+       -o-box-shadow: 2px 4px 6px -2px #a3a3a394;
+          box-shadow: 2px 4px 6px -2px #a3a3a394;
+}
+
+// Breakpoints
+@mixin smMinBreakPoint {
+  @media (min-width: #{$screen-sm}) {
+      @content;
+  }
+}
+
+@mixin mdMinBreakPoint {
+  @media (min-width: #{$screen-md}) {
+      @content;
+  }
+}
+
+/// Event wrapper
+@mixin on-event($self: false) {
+  @if $self {
+    &,
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  } @else {
+    &:hover,
+    &:active,
+    &:focus,
+    &:focus-within {
+      @content;
+    }
+  }
+}
+
+@mixin lgMinBreakPoint {
+  @media (min-width: #{$screen-lg}) {
+    @content;
+  }
+}
+
+@mixin card($vetical: 18px, $horizontal: 14px, $flx: 1) {
+  background-color: $color-white;
+  padding: $vetical $lg * 2;
+  flex: $flx;
+  @include border-radius(14px);
+  
+  @media (min-width: #{$screen-sm}) {
+    padding: $vetical $horizontal;
+  }
+}

@@ -1,0 +1,25 @@
+.progress-bar {
+  display: flex;
+  flex-direction: column;
+  gap: $sm - 2;
+
+  span {
+    font-size: $small-font - 2;
+    text-transform: lowercase;
+    color: $color-light-green;
+  }
+
+  &__line {
+    height: $sm - 3;
+    width: 120px;
+    background-color: $border-color;
+    @include border-radius(20px);
+
+    &__progress {
+      height: 100%;
+      background-color: $color-light-green;
+      @include border-radius(20px);
+    }
+  }
+
+}

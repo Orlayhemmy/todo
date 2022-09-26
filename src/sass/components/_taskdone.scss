@@ -1,0 +1,40 @@
+.task-done {
+  @include card;
+
+  ul {
+    margin: 0;
+  }
+
+  &__header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: $lg;
+  
+    &__chart-tabs {
+      display: flex;
+      gap: $md * 2;
+      margin-right: $md - 4;
+
+      &__tab {
+        font-weight: 500;
+        font-size: $medium-font;
+        color: $color-dark-green;
+        text-transform: capitalize;
+
+        hr {
+          border: 1px solid $color-dark-yellow;
+        }
+
+        &:hover {
+          color: $color-dark-yellow;
+        }
+      }
+    }
+  }
+
+  &__chart {
+    padding: 10px;
+    background-color: #fff;
+  }
+}

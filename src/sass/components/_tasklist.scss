@@ -1,0 +1,54 @@
+.tasklist {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: $md;
+  @include card(28px, 0px, 0);
+
+  h3 {
+    padding: 0 28px;
+  }
+
+  &__table {
+    width: 100%;
+    table {
+      width: inherit;
+      border-collapse: collapse;
+
+      thead {
+        text-align: left;
+        text-transform: capitalize;
+      }
+
+      td, th {
+        font-size: $small-font;
+        padding: 0 $md;
+        padding: $sm 0;
+
+        &:first-child {
+          padding-left: $md * 2;
+          max-width: 150px;
+        }
+      }
+      
+      td {
+        color: $color-black;
+        font-weight: 500;
+        text-transform: capitalize;
+        border-top: 1px solid $border-color;
+        padding: 0;
+      }
+
+      button {
+        border: none;
+        background: transparent;
+        fill: $text-color;
+
+        svg {
+          width: 20px;
+          @include rotate(90deg)
+        }
+      };
+    }
+  }
+}

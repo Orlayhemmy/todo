@@ -1,0 +1,61 @@
+.sidebar {
+  display: none;
+
+  @media only screen and (min-width: $screen-lg) {
+    display: flex;
+    flex-direction: column;
+    background-color: $color-white;
+    padding: $md + 4;
+    gap: $lg * 4.3;
+  
+    &__logo {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      
+      svg {
+        height: $lg + 4;
+        fill: $color-dark-yellow;
+      }
+      
+      span {
+        font-size: $small-font;
+        margin-top: $sm;
+        font-weight: 700;
+        text-transform: uppercase;
+        color: $color-dark-green;
+      }
+
+    }
+  
+    &__menu {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 28px;
+  
+      li {
+        display: flex;
+        padding: 8px;
+        @include border-radius(14px);
+  
+        svg {
+          width: $lg - 4;
+          height: $lg - 4;
+          fill: $menu-icon-color;
+        }
+  
+        &:first-child {
+          background-color: $color-dark-green;
+          @include box-shadow;
+  
+          svg {
+            width: $lg + 2;
+            height: $lg + 2;
+            fill: $color-white;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,65 @@
+.status-card {
+  @include card();
+  &__header {
+    display: flex;
+    border-bottom: 1px solid $border-color;
+    gap: $sm;
+    align-items: center;
+    padding-bottom: $lg;
+
+    svg {
+      width: $small-font + 2;
+    }
+
+    span {
+      flex: 0.1;
+      &:first-child {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: $background-color;
+        padding: 8px;
+        @include border-radius(50%)
+      }
+      
+      &:last-child {
+        color: $color-black;
+        font-weight: 700;
+        font-size: $large-font;
+      }
+    }
+
+    h4 {
+      flex: 0.8;
+    }
+  } 
+
+  &__footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    svg {
+      width: 60px;
+      height: 60px;
+      @include rotate(75deg);
+    }
+    
+    div {
+      text-align: end;
+    }
+
+    p {
+      font-size: $small-font + 2;
+      font-weight: 500;
+      margin: $sm/2 0;
+    }
+
+    
+    &__task-completed {
+      font-size: $small-font + 2;
+      font-weight: 600;
+      color: #299702;
+    }
+  }
+}

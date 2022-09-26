@@ -1,0 +1,45 @@
+.dashboard {
+  display: flex;
+  flex: 1;
+
+  &__tasks-container {
+    display: flex;
+    margin: 0 auto;
+    flex: 1;
+    flex-direction: column;
+
+    @media (min-width: #{$screen-md}) {
+     flex-direction: row;
+    }
+  }
+
+  &__content {
+    flex: 1;
+  }
+}
+
+.chart {
+  display: flex;
+  gap: $md;
+  padding: $lg - 4 $md * 2;
+  flex-direction: column;
+  flex: 1;
+  margin: 0 auto;
+
+  &__summary {
+    display: flex;
+    flex-direction: column;
+    gap: $md + 2;
+  }
+
+  @media (min-width: #{$screen-lg}) {
+    flex: 1;
+  }
+
+  @media (min-width: #{$screen-sm}) {
+    &__summary {
+      display: flex;
+      flex-direction: row;
+    }
+  }
+}

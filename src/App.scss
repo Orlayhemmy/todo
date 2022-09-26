@@ -1,0 +1,11 @@
+.chart {
+  display: flex;
+  gap: 28px;
+  padding: 28px;
+  flex-direction: column;
+
+  &__summary {
+    display: flex;
+    gap: 28px;
+  }
+}
