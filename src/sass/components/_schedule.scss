@@ -1,4 +1,5 @@
 .schedule {
+  display: none;
   width: 100%;
   margin: 0 auto;
   padding: $lg $md * 2;
@@ -21,7 +22,7 @@
     padding: $sm + 2 $md;
   }
 
-  @media (min-width: #{$screen-sm}) {
+  @media (min-width: #{$screen-md}) {
     display: flex;
     flex-direction: column;
     width: 338px;
